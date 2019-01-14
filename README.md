@@ -47,3 +47,5 @@ The goal of this exercise is to deliver a single page of personalized content in
 `npm run test:unit`
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+### Deployed To
+[https://gannett-developer-candidate-exercise.netlify.com/](https://gannett-developer-candidate-exercise.netlify.com/)
