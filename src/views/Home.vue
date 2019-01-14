@@ -1,8 +1,9 @@
 <template>
-  <div class='home'>
+  <div class='home' v-bind:class="{rare: theme === 'rare', well: theme === 'well'}">
     <h1>My Delicious Articles</h1>
-    <Article v-for="article in articles" v-bind:key="article.href" v-bind:article="article"/>
-    <HelloWorld msg='Welcome to Your Vue.js App'/>
+    <div class="grid">
+      <Article v-for="article in articles" v-bind:key="article.href" v-bind:article="article"/>
+    </div>
   </div>
 </template>
 
@@ -115,3 +116,36 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .home {
+    font-size: 16px;
+    padding: 24px;
+
+    &.rare {
+      color: #DC143C
+    }
+
+    &.well {
+      color: #8B4513
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 32px;
+      margin: 0 0 24px;
+    }
+
+    .grid {
+      align-items: center;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 24px;
+
+      @media (max-width: 799px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+</style>
