@@ -4,10 +4,14 @@ import Article from '@/components/Article.vue'
 
 describe('Article.vue', () => {
   it('renders props.article when passed', () => {
-    const article = 'new message'
+    const article = {
+      title: 'test',
+      summary: 'test summary',
+      href: 'https://example.com'
+    }
     const wrapper = shallowMount(Article, {
       propsData: { article }
     })
-    expect(wrapper.text()).to.include(article)
+    expect(wrapper.props('article')).to.include(article)
   })
 })

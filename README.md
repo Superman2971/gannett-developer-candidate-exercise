@@ -39,8 +39,6 @@ The goal of this exercise is to deliver a single page of personalized content in
 `npm run serve`
 ### Compiles and minifies for production
 `npm run build`
-### Run your tests
-`npm run test`
 ### Lints and fixes files
 `npm run lint`
 ### Run your end-to-end tests
