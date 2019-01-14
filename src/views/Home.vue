@@ -63,7 +63,7 @@ export default {
           this.profile = response
           this.setCookie('profile', JSON.stringify(this.profile), 365)
           this.getArticles()
-        }, (error) => {
+        }).catch((error) => {
           console.log('error', error)
           this.loading = false
         })
@@ -92,7 +92,7 @@ export default {
           this.articles = response.articles
           this.theme = response.theme
           this.loading = false
-        }, (error) => {
+        }).catch((error) => {
           console.log('error', error)
           this.loading = false
         })
