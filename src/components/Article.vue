@@ -22,12 +22,19 @@ export default {
   .article {
     border: 1px solid rgba(0, 0, 0, 0.24);
     border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(10, 44, 76, 0.12), 0 1px 2px rgba(10, 44, 76, 0.12);
     font-size: 16px;
     height: 100%;
+    transition: 0.25 ease;
     width: 100%;
+
+    &:hover {
+      box-shadow: 0 3px 6px rgba(10, 44, 76, 0.12), 0 3px 6px rgba(10, 44, 76, 0.12);
+    }
 
     a {
       color: inherit;
+      cursor: pointer;
       text-decoration: none;
       height: 100%;
       width: 100%;
@@ -42,6 +49,7 @@ export default {
     }
 
     .summary {
+      height: calc(100% - 66px);
       padding: 16px;
       text-align: left;
       width: 100%;
