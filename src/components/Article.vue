@@ -23,7 +23,7 @@ export default {
     box-shadow: 0 1px 3px rgba(10, 44, 76, 0.12), 0 1px 2px rgba(10, 44, 76, 0.12);
     font-size: 16px;
     height: 100%;
-    transition: 0.25 ease;
+    transition: 0.25s ease;
     width: 100%;
 
     &:hover {
